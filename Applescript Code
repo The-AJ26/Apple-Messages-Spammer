@@ -1,0 +1,15 @@
+THE FOLLOWING IS THE RAW APPLESCRIPT CODE; PASTE INTO APPLESCRIPT:
+
+set d to random number from 0.25 to 0.5 -- returns an integer
+tell application "Messages"
+	reopen
+	activate
+end tell
+delay d
+repeat 20 times
+	tell application "System Events" to keystroke "v" using {command down}
+	delay d
+	tell application "System Events"
+		keystroke return
+	end tell
+end repeat
